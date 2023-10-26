@@ -1,27 +1,4 @@
-/*
- Task:
- Generate the driver file (main.cpp) where you perform the following tasks. Note that you cannot make any change to the
- header file or the source file.
 
- Operations to be performed:
-    • Create a tree object.
-    • Print if the tree is empty or not.
-    • Insert ten items.
-    • Print if the tree is empty or not.
-    • Print the length of the tree.
-    • Retrieve 9 and print whether found or not.
-    • Retrieve 13 and print whether found or not.
-    • Print the elements in the tree (inorder).
-    • Print the elements in the tree (preorder).
-    • Print the elements in the tree (postorder).
-    • Make the tree empty.
-
-    • Given a sequence of integers, determine the best ordering of the integers to insert them into a binary search
-    tree. The best order is the one that will allow the binary search tree to have the minimum height. Hint: Sort the
-    sequence (use the inorder traversal). The middle element is the root. Insert it into an empty tree. Now in the
-    same way, recursively build the left subtree and then the right subtree.
-
-*/
 
 #include <iostream>
 #include "binarysearchtree.cpp"
@@ -75,12 +52,12 @@ int main() {
     tree.InsertItem(5);
     tree.InsertItem(1);
 
-    checkEmpty(tree.IsEmpty());                  // Print if the tree is empty or not
+    checkEmpty(tree.IsEmpty());          
 
-    cout << tree.LengthIs() << endl;             // Print the length of the tree
+    cout << tree.LengthIs() << endl;           
 
-    itemFound(tree, 9);                          // Retrieve 9 and print whether found or not
-    itemFound(tree, 13);                         // Retrieve 13 and print whether found or not
+    itemFound(tree, 9);                         
+    itemFound(tree, 13);                       
 
     // Print the elements in the tree (inorder)
     tree.ResetTree(IN_ORDER);
@@ -112,11 +89,11 @@ int main() {
     }
     cout << endl;
 
-    tree.MakeEmpty();                            // Make the tree empty
+    tree.MakeEmpty();                          
 
 
     // Second Task
-    TreeType<int> sequenceTree;                  // Create a tree object
+    TreeType<int> sequenceTree;                 
     int num = 10;
     int sequence[] = {11, 9, 4, 2, 7, 3, 17, 0, 5, 1};
 
